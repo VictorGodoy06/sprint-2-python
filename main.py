@@ -22,7 +22,7 @@ def sprint_2_python():
     }
 
     while True:
-        print("\n--- 📸 SPRINT 2 PYTHON - MENU PRINCIPAL ---")
+        print("\n--- SPRINT 2 PYTHON - MENU PRINCIPAL ---")
         print("1. Capturar e Classificar Foto (IA)")
         print("2. Visualizar Galeria Acadêmica")
         print("3. Verificar Integrações de Matérias")
