@@ -9,6 +9,9 @@
 # - Victor Godoy               | RM: 571454
 # ---------------------------------------------------------
 
+def limpar_console():
+    os.system("cls" if os.name == "nt" else "clear")
+
 def sprint_2_python():
     # Base de dados simulada: Lista de dicionários para armazenar as fotos/matérias[cite: 1]
     biblioteca_estudos = []
