@@ -1,3 +1,8 @@
+#import os
+
+def limpar_console():
+    os.system("cls" if os.name == "nt" else "clear")
+
 # ---------------------------------------------------------
 # SPRINT 2: COMPUTATIONAL THINKING WITH PYTHON
 # 
@@ -8,9 +13,6 @@
 # - Gustavo Noleto             | RM: 569592
 # - Victor Godoy               | RM: 571454
 # ---------------------------------------------------------
-
-def limpar_console():
-    os.system("cls" if os.name == "nt" else "clear")
 
 def sprint_2_python():
     # Base de dados simulada: Lista de dicionários para armazenar as fotos/matérias[cite: 1]
@@ -24,6 +26,9 @@ def sprint_2_python():
         "Calculo": "Fisica"
     }
 
+    # Uma limpeza ao iniciar; não limpar no começo de cada volta do while,
+    # senão o resultado das opções 2 e 3 some antes de ser lido.
+    limpar_console()
     while True:
         print("\n--- SPRINT 2 PYTHON - MENU PRINCIPAL ---")
         print("1. Capturar e Classificar Foto (IA)")
@@ -32,6 +37,7 @@ def sprint_2_python():
         print("0. Sair")
 
         opcao = input("Escolha uma funcionalidade: ")
+        limpar_console()
 
         # Validação de entrada: garante que apenas números sejam aceitos[cite: 1]
         if not opcao.isdigit():
@@ -42,7 +48,10 @@ def sprint_2_python():
             case "1":
                 print("\n--- CAPTURA INTELIGENTE ---")
                 nome_arquivo = input("Nome do arquivo (ex: aula_01): ").strip()
+                limpar_console()
+                print("\n--- CAPTURA INTELIGENTE ---")
                 materia = input("Qual a matéria desta foto? ").capitalize().strip()
+                limpar_console()
 
                 if not nome_arquivo or not materia:
                     print("[ERRO] Nome e matéria são obrigatórios!")
